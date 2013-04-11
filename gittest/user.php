@@ -11,25 +11,6 @@ if (! defined ( 'BASEPATH' ))
  *
  *
  *
- * @package		Cobub Razor
- * @author		WBTECH Dev Team
- * @copyright	Copyright (c) 2011 - 2012, NanJing Western Bridge Co.,Ltd.
- * @license		http://www.cobub.com/products/cobub-razor/license
- * @link		http://www.cobub.com/products/cobub-razor/
- * @since		Version 1.0
- * @filesource
- */
-class User extends CI_Controller {
-	function __construct() {
-		parent::__construct ();
-		
-		$this->load->helper ( 'url' );
-		$this->load->model ( 'user/ums_user', 'user' );
-		$this->load->Model ( 'common' );
-		$this->load->Model ( 'user/ums_user' );
-		$this->canRead = $this->common->canRead ( $this->router->fetch_class () );		
-		$this->common->requireLogin ();
-	}
 	
 	function index() {
 		
